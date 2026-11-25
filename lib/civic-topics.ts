@@ -1,0 +1,12 @@
+export const civicTopics = [
+  { id:'roads', category:'Infrastructure', icon:'▱', title:'Safer roads and smoother journeys', titleHi:'सुरक्षित सड़कें', summary:'Should safe road surfaces, pothole repairs and pedestrian crossings be a bigger local priority?', impact:'Safer commutes for students, workers and families.', accent:'coral' },
+  { id:'water', category:'Essential services', icon:'≈', title:'Reliable clean water for every area', titleHi:'हर क्षेत्र में स्वच्छ पानी', summary:'Should dependable water supply and clear service updates receive more public attention?', impact:'More predictable daily routines and healthier communities.', accent:'blue' },
+  { id:'sanitation', category:'Essential services', icon:'✳', title:'Cleaner streets and public markets', titleHi:'स्वच्छ बाज़ार और गलियाँ', summary:'Would better waste collection, public bins and cleaner shared spaces make the biggest difference?', impact:'More pleasant, welcoming neighborhoods for everyone.', accent:'green' },
+  { id:'lighting', category:'Infrastructure', icon:'☼', title:'Well-lit and safer public streets', titleHi:'रौशन और सुरक्षित सड़कें', summary:'Should working streetlights and visibility in public areas move higher on the community agenda?', impact:'Greater confidence for people travelling after dark.', accent:'yellow' },
+  { id:'youth', category:'Community life', icon:'◈', title:'More places for youth and sport', titleHi:'युवाओं के लिए बेहतर सुविधाएँ', summary:'Could accessible sports facilities, libraries and creative spaces bring more opportunities for young people?', impact:'Room to learn, connect, compete and grow.', accent:'purple' },
+  { id:'parks', category:'Community life', icon:'❋', title:'Better parks and walkable spaces', titleHi:'बेहतर पार्क और फुटपाथ', summary:'Should Bhind make greener parks, accessible footpaths and everyday gathering places a shared goal?', impact:'Healthier, more inclusive spaces to spend time together.', accent:'green' },
+  { id:'transparency', category:'Accountability', icon:'◎', title:'Clear updates on public projects', titleHi:'जनहित कार्यों में पारदर्शिता', summary:'Should public works be easier for everyone to follow, with clearer timelines, budgets and progress updates?', impact:'More informed conversations and meaningful accountability.', accent:'blue' }
+] as const;
+
+export type CivicTopicId = (typeof civicTopics)[number]['id'];
+export const civicTopicIds = new Set<string>(civicTopics.map(topic => topic.id));
